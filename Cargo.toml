@@ -1,0 +1,25 @@
+[package]
+name = "loggers-rs"
+version = "0.0.1"
+edition = "2018"
+authors = ["phR0ze"]
+license = "MIT OR Apache-2.0"
+description = "Example usage of popular loggers in Rust"
+readme = "README.md"
+homepage = "https://github.com/phR0ze/loggers-rs"
+repository = "https://github.com/phR0ze/loggers-rs"
+exclude = [
+	"examples",
+	"tests",
+	"benches"
+]
+
+[profile.release]
+lto = true
+
+[workspace]
+
+[dependencies]
+
+[build-dependencies]
+chrono = "0.4"
