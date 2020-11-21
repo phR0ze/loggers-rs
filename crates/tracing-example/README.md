@@ -62,6 +62,8 @@ This will setup logging for all threads
    }
    ```
 
+![Tracing output](../../docs/images/tracing-standard.png)
+
 ### Consuming log records as tracing events
 Many existing crates that you will import will be using the venerable `log` facade to emit messages.
 Capturing those messages as tracing events is automatically taken care of when using the
