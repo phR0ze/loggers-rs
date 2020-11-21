@@ -1,11 +1,11 @@
 [package]
-name = "slog"
+name = "slog-example"
 version = "0.0.1"
 edition = "2018"
 authors = ["phR0ze"]
 license = "MIT OR Apache-2.0"
 description = "Library to test out the logging package tracing"
-homepage = "https://github.com/phR0ze/logging-rs/crates/slog"
-repository = "https://github.com/phR0ze/logging-rs/crates/slog"
+homepage = "https://github.com/phR0ze/logging-rs/crates/slog-example"
+repository = "https://github.com/phR0ze/logging-rs/crates/slog-example"
 
 [dependencies]
