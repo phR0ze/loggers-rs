@@ -18,6 +18,10 @@ exclude = [
 lto = true
 
 [workspace]
+members = [
+    "crates/tracing",
+    "crates/slog",
+]
 
 [dependencies]
 
