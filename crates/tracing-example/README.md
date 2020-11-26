@@ -42,8 +42,11 @@ This will setup logging for all threads
            Ok(val) => val.parse().unwrap_or(Level::INFO),
            Err(_e) => Level::INFO,
        };
-       tracing_subscriber::fmt().with_max_level(loglevel).init();
-   
+        tracing_subscriber::fmt()
+            .with_max_level(loglevel)
+            //.json() // uncomment this line to convert it into json output
+            .init();   
+
        // including number_of_yaks in this way will add a structured field to the event
        // at the end using the variables name and value `number_of_yaks=2`
        let number_of_yaks = 2;
@@ -67,9 +70,13 @@ This will setup logging for all threads
 ### Consuming log records as tracing events
 Many existing crates that you will import will be using the venerable `log` facade to emit messages.
 Capturing those messages as tracing events is automatically taken care of when using the
-`tracing_subscriber::fmt()`.
+`tracing_subscriber::fmt()` function.
 
 * [tracing-subscriber includes tracing-log](https://github.com/tokio-rs/tracing/blob/b1baa6c2ef4877bd7f11de5991234fc81a025947/tracing-subscriber/Cargo.toml#L44)
 * [tracing-subscriber enabled tracing-log by default](https://github.com/tokio-rs/tracing/blob/b1baa6c2ef4877bd7f11de5991234fc81a025947/tracing-subscriber/Cargo.toml#L26)
 
 ### In Libraries
+Using tracing in libraries is as simple as importing `tracing::{debug, error, info, span, warn, Level}`
+then using these macros in your code and including the dependency `tracing = "0.1"` in your
+manifest.
+

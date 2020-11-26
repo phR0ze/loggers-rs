@@ -9,3 +9,6 @@ homepage = "https://github.com/phR0ze/logging-rs/crates/slog-example"
 repository = "https://github.com/phR0ze/logging-rs/crates/slog-example"
 
 [dependencies]
+log = "0.4"
+slog = "2.5"
+slog-term = "2.6"

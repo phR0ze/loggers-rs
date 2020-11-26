@@ -1,6 +1,6 @@
 [package]
 name = "loggers-rs"
-version = "0.0.3"
+version = "0.0.4"
 edition = "2018"
 authors = ["phR0ze"]
 license = "MIT OR Apache-2.0"
@@ -27,11 +27,17 @@ path = "crates/slog-example"
 
 [dependencies]
 log = "0.4"
+slog = "2.5"
+slog-term = "2.6"
 tracing = "0.1"
 tracing-subscriber = "0.2"
 
 [build-dependencies]
 chrono = "0.4"
+
+[[example]]
+name = "slog-standard"
+path = "crates/slog-example/examples/standard.rs"
 
 [[example]]
 name = "tracing-standard"

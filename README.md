@@ -5,3 +5,7 @@ Example usage of popular loggers in Rust
 | ------- | -------- | ------ | ---- |
 | tracing | 1.1k     | 183    | [tracing](https://github.com/tokio-rs/tracing) |
 | log     |          |        | [rust-lang default offering](https://github.com/rust-lang/log) |
+
+## Examples details
+* [slog](crates/slog-example)
+* [tracing](crates/tracing-example)
